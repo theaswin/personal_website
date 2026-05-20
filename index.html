@@ -1,94 +1,378 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Aswin Nath</title>
+<title>Aswin Nath | AI & Python Developer</title>
 
 <link rel="icon" href="./icons/favicon.jpeg">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://kit.fontawesome.com/d6f90013e8.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:#111;
-    font-family: 'Courier New', monospace;
+    background:#050816;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* AI BACKGROUND */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(0,191,255,0.15), transparent 25%),
+    radial-gradient(circle at 80% 30%, rgba(0,255,255,0.10), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(0,191,255,0.10), transparent 25%);
+    z-index:-2;
+    animation:bgMove 12s infinite alternate ease-in-out;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size:40px 40px;
+    z-index:-1;
+}
+
+@keyframes bgMove{
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+
+    100%{
+        transform:translate(-30px,-20px) scale(1.1);
+    }
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00bfff;
+    border-radius:10px;
 }
 
 /* NAVBAR */
 
 .navbar{
-    background:#e6dfe0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-/* HERO SECTION */
+.navbar-brand{
+    font-weight:700;
+    color:#00bfff !important;
+    font-size:28px;
+}
+
+.nav-link{
+    color:white !important;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#00bfff !important;
+}
+
+/* HERO */
 
 .hero{
-    background:#fff;
-    padding:80px 0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
 }
 
 .profile-img{
-    width:220px;
-    height:220px;
-    object-fit:cover;
+    width:280px;
+    height:280px;
     border-radius:50%;
-    border:5px solid #ddd;
+    object-fit:cover;
+    border:5px solid #00bfff;
+    box-shadow:0 0 40px rgba(0,191,255,0.5);
+    transition:0.5s;
+    animation:float 4s ease-in-out infinite;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0px);}
+}
+
+.hero-text h1{
+    font-size:70px;
+    font-weight:700;
+}
+
+.hero-text h1 span{
+    color:#00bfff;
+}
+
+.hero-text h3{
+    margin-top:10px;
+    color:#b0b0b0;
+}
+
+.hero-text p{
+    margin-top:25px;
+    line-height:1.8;
+    color:#d0d0d0;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.btn-custom{
+    padding:12px 28px;
+    border:none;
+    border-radius:40px;
+    background:#00bfff;
+    color:white;
+    font-weight:600;
+    margin-right:15px;
+    transition:0.4s;
+    text-decoration:none;
+}
+
+.btn-custom:hover{
+    background:white;
+    color:#000;
+    transform:translateY(-5px);
+}
+
+.btn-outline-custom{
+    padding:12px 28px;
+    border:2px solid #00bfff;
+    border-radius:40px;
+    color:#00bfff;
+    text-decoration:none;
+    transition:0.4s;
+}
+
+.btn-outline-custom:hover{
+    background:#00bfff;
+    color:white;
+}
+
+/* SOCIAL */
+
+.social-icons{
+    margin-top:35px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:50px;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:50%;
+    margin-right:15px;
+    color:white;
+    text-decoration:none;
+    transition:0.4s;
+    font-size:20px;
+}
+
+.social-icons a:hover{
+    background:#00bfff;
+    transform:translateY(-8px) rotate(360deg);
+    box-shadow:0 0 20px #00bfff;
+}
+
+/* SECTION */
+
+.section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:45px;
+    font-weight:700;
+}
+
+.section-title span{
+    color:#00bfff;
 }
 
 /* ABOUT */
 
-.about{
-    padding:60px 0;
+.about-card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:40px;
+    transition:0.4s;
 }
 
-/* PROJECT SLIDER */
-
-.slider-wrapper{
-    background:#000;
-    overflow:hidden;
-    padding:20px 0;
+.about-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,191,255,0.2);
 }
 
-.video-track{
-    display:flex;
-    gap:20px;
-    animation:scroll 60s linear infinite;
+.about-card p{
+    line-height:2;
+    color:#cfcfcf;
 }
 
-.video-panel{
-    min-width:300px;
-    height:180px;
-    border-radius:8px;
-    overflow:hidden;
-}
+/* SKILLS */
 
-.video-panel video{
-    width:100%;
+.skill-box{
+    background:rgba(255,255,255,0.05);
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    transition:0.4s;
     height:100%;
-    object-fit:cover;
 }
 
-@keyframes scroll{
-from{transform:translateX(0)}
-to{transform:translateX(-50%)}
+.skill-box:hover{
+    transform:translateY(-10px);
+    background:#00bfff;
+}
+
+.skill-box i{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+/* PROJECTS */
+
+.project-card{
+    background:#0f172a;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    height:100%;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 30px rgba(0,191,255,0.2);
+}
+
+.project-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.project-card:hover img{
+    transform:scale(1.05);
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h4{
+    margin-bottom:15px;
+}
+
+.project-content p{
+    color:#cfcfcf;
+    line-height:1.8;
 }
 
 /* CONTACT */
 
 .contact{
-    background:#e6dfe0;
-    padding:40px;
+    background:#081120;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.contact-box{
     text-align:center;
 }
 
-.icon-links i{
-    margin:10px;
-    font-size:28px;
+.contact-box i{
+    font-size:35px;
+    color:#00bfff;
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    color:#d0d0d0;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#030712;
+    color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+    padding-top:80px;
+}
+
+.hero-text h1{
+    font-size:48px;
+}
+
+.profile-img{
+    width:220px;
+    height:220px;
+    margin-bottom:40px;
+}
+
 }
 
 </style>
@@ -99,14 +383,42 @@ to{transform:translateX(-50%)}
 
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
+
 <div class="container">
 
-<a class="navbar-brand fw-bold">ASWIN NATH</a>
+<a class="navbar-brand" href="#">ASWIN NATH</a>
 
-<span class="ms-2">Python Developer</span>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#skills">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#projects">Achievements</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
 
 </div>
+
+</div>
+
 </nav>
 
 <!-- HERO -->
@@ -117,38 +429,47 @@ to{transform:translateX(-50%)}
 
 <div class="row align-items-center">
 
-<div class="col-md-4 text-center">
-<img src="./img.jpeg" class="profile-img">
-<h3 class="mt-3">Aswin Nath</h3>
-<p>Python Developer</p>
+<div class="col-lg-5 text-center">
+
+<img src="./data/me.png" class="profile-img">
+
 </div>
 
-<div class="col-md-8">
+<div class="col-lg-7 hero-text">
 
-<h1>Hello</h1>
+<h1>Hi, I'm <span>Aswin Nath</span></h1>
 
-<h4>Here's who I am & what I do</h4>
+<h3>Python Developer | AI & Data Science Enthusiast</h3>
 
 <p>
 
-Hi there! I'm Aswin, a passionate developer interested in data science,
-machine learning, and intelligent systems.
+Passionate developer focused on Artificial Intelligence,
+Machine Learning, Data Science, and scalable software solutions.
 
-I enjoy exploring complex datasets and building systems that transform
-data into useful insights.
-
-My goal is to create impactful solutions through software,
-AI, and data-driven technologies.
+Experienced in Python, Odoo ERP, AI systems,
+analytics, automation, and modern web technologies.
 
 </p>
 
-<div class="icon-links">
+<div class="hero-buttons">
+
+<a href="#projects" class="btn-custom">
+View Achievements
+</a>
+
+<a href="#contact" class="btn-outline-custom">
+Contact Me
+</a>
+
+</div>
+
+<div class="social-icons">
 
 <a href="https://github.com/theaswin">
 <i class="fa-brands fa-github"></i>
 </a>
 
-<a href="https://linkedin.com">
+<a href="#">
 <i class="fa-brands fa-linkedin"></i>
 </a>
 
@@ -166,48 +487,240 @@ AI, and data-driven technologies.
 
 </section>
 
-<!-- PROJECTS -->
+<!-- ABOUT -->
 
-<section class="about">
+<section class="section" id="about">
 
-<div class="container text-center">
+<div class="container">
 
-<h2 class="mb-5">Personal Projects & Achievements</h2>
+<div class="section-title">
+<h2>About <span>Me</span></h2>
+</div>
+
+<div class="about-card">
+
+<p>
+
+I am a Python and Odoo Developer with strong interest in
+Artificial Intelligence, Machine Learning, and Data Science.
+
+I specialize in scalable business applications,
+automation systems, intelligent workflows,
+ERP customizations, and data-driven solutions.
+
+</p>
 
 </div>
 
-<div class="slider-wrapper">
-
-<div class="video-track">
-
-<div class="video-panel">
-<video autoplay loop muted controls>
-<source src="data/eom.mp4" type="video/mp4">
-</video>
 </div>
 
-<div class="video-panel">
-<video autoplay loop muted controls>
-<source src="data/chief.mp4" type="video/mp4">
-</video>
+</section>
+
+<!-- SKILLS -->
+
+<section class="section" id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>My <span>Skills</span></h2>
 </div>
 
-<div class="video-panel">
-<video autoplay loop muted controls>
-<source src="video1.mp4" type="video/mp4">
-</video>
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="skill-box">
+<i class="fa-brands fa-python"></i>
+<h4>Python Development</h4>
+</div>
 </div>
 
-<div class="video-panel">
-<video autoplay loop muted controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
+<div class="col-md-4">
+<div class="skill-box">
+<i class="fa-solid fa-brain"></i>
+<h4>Machine Learning</h4>
+</div>
 </div>
 
-<div class="video-panel">
-<video autoplay loop muted controls>
-<source src="video3.mp4" type="video/mp4">
-</video>
+<div class="col-md-4">
+<div class="skill-box">
+<i class="fa-solid fa-chart-line"></i>
+<h4>Data Science</h4>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="skill-box">
+<i class="fa-solid fa-robot"></i>
+<h4>Artificial Intelligence</h4>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="skill-box">
+<i class="fa-solid fa-database"></i>
+<h4>SQL & Analytics</h4>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="skill-box">
+<i class="fa-solid fa-gears"></i>
+<h4>Odoo ERP Development</h4>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section class="section" id="projects">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Achievements & <span>Contributions</span></h2>
+</div>
+
+<div class="row g-4">
+
+<!-- CARD 1 -->
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<img src="data/zesty.png">
+
+<div class="project-content">
+
+<h4>Employee Of The Month</h4>
+
+<p>
+Recognized as Employee of the Month at ZestyBeanz for dedication,
+consistent performance, and impactful contributions to the team.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<img src="data/mon.png">
+
+<div class="project-content">
+
+<h4>AI Session In College</h4>
+
+<p>
+Conducted a session on Big Data Analytics and AI technologies
+for students at Ponnani College.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<img src="data/olderp.png">
+
+<div class="project-content">
+
+<h4>Data Bridge</h4>
+
+<p>
+Developed a custom ERP migration module to recover and transfer
+legacy ERP data into new systems.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<img src="data/morpho.png">
+
+<div class="project-content">
+
+<h4>Morpho</h4>
+
+<p>
+The Odoo system automatically sends periodic payment reminders to customers for pending or overdue invoices. These reminders help ensure timely payments by notifying customers through email or system notifications at scheduled intervals.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<img src="data/coms.png">
+
+<div class="project-content">
+
+<h4>Coming Soon . . .</h4>
+
+<p>
+Coming Soon . . .
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<img src="data/coms.png">
+
+<div class="project-content">
+
+<h4>Coming Soon . . .</h4>
+
+<p>
+Coming Soon . . .
+</p>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -218,15 +731,57 @@ AI, and data-driven technologies.
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section class="section contact" id="contact">
 
-<h4>Contact</h4>
+<div class="container">
 
-<p><i class="fa-solid fa-phone"></i> 98 955 693 40</p>
+<div class="section-title">
+<h2>Get In <span>Touch</span></h2>
+</div>
 
-<p><i class="fa-solid fa-envelope"></i> aswinnathparat@gmail.com</p>
+<div class="row g-4">
+
+<div class="col-md-6">
+
+<div class="contact-box">
+
+<i class="fa-solid fa-phone"></i>
+
+<h4>Phone</h4>
+
+<p>+91 98955 69340</p>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="contact-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h4>Email</h4>
+
+<p>aswinnathparat@gmail.com</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
+
+<footer>
+
+© 2026 Aswin Nath | AI & Python Developer
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
