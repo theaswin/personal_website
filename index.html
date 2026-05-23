@@ -425,6 +425,37 @@ body::after{
     border-radius:30px;
     font-size:13px;
     color:#d1d5db;
+    position: relative;
+    overflow: hidden;
+    animation: illuminate 3s ease-in-out infinite alternate;
+}
+
+.skill-tags span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shine 6s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+@keyframes illuminate {
+    0% {
+        box-shadow: inset 0 0 0 rgba(0, 191, 255, 0);
+        color: #d1d5db;
+    }
+    100% {
+        box-shadow: inset 0 0 20px rgba(0, 191, 255, 0.5);
+        color: #ffffff;
+    }
 }
 
 .achievement-card{
@@ -559,14 +590,6 @@ footer{
 
 <h4>Python Developer | AI & Data Science Enthusiast</h4>
 
-<p class="intro-text">
-
-Passionate developer focused on Artificial Intelligence,
-Machine Learning, Data Science, scalable software solutions,
-Odoo ERP systems, analytics, and automation.
-
-</p>
-
 <div class="personal-info">
 
 <div class="info-box">
@@ -614,33 +637,79 @@ Odoo ERP systems, analytics, and automation.
 
 <div class="section-menu">
 
-<a onclick="showSection('about-section')">About</a>
-<a onclick="showSection('experience-section')">Experience</a>
 <a onclick="showSection('skills-section')">Skills</a>
+<a onclick="showSection('experience-section')">Experience</a>
+<a onclick="showSection('education-section')">Education</a>
+<a onclick="showSection('projects-section')">Projects</a>
 <a onclick="showSection('achievement-section')">Achievements</a>
 
 </div>
 
-<!-- ABOUT -->
+<!-- SKILLS -->
 
-<section class="section active" id="about-section">
+<section class="section active" id="skills-section">
 
 <div class="section-title">
-<h2>About <span>Me</span></h2>
+<h2> <span>Skills</span></h2>
 </div>
 
-<div class="about-card">
+<div class="row g-4">
 
-<p>
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-brands fa-python"></i>
+<h4>Python Development</h4>
+</div>
+</div>
 
-I am a Python and Odoo Developer with strong interest in
-Artificial Intelligence, Machine Learning, and Data Science.
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-solid fa-brain"></i>
+<h4>Machine Learning</h4>
+</div>
+</div>
 
-I specialize in scalable business applications,
-automation systems, intelligent workflows,
-ERP customizations, and data-driven solutions.
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-solid fa-chart-line"></i>
+<h4>Data Science</h4>
+</div>
+</div>
 
-</p>
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-solid fa-robot"></i>
+<h4>Artificial Intelligence</h4>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-solid fa-database"></i>
+<h4>SQL & Analytics</h4>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-solid fa-gears"></i>
+<h4>Odoo ERP Development</h4>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-solid fa-infinity"></i>
+<h4>DevOps</h4>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="skill-box">
+<i class="fa-solid fa-arrows-spin"></i>
+<h4>CI/CD</h4>
+</div>
+</div>
 
 </div>
 
@@ -995,56 +1064,397 @@ data visualization, predictive analytics, and model experimentation.
 
 </section>
 
-<!-- SKILLS -->
+<!-- EDUCATION -->
 
-<section class="section" id="skills-section">
+<section class="section" id="education-section">
 
 <div class="section-title">
-<h2>My <span>Skills</span></h2>
+<h2> <span>Education</span></h2>
+</div>
+
+<div class="company-group">
+
+<div class="company-header">
+
+<div class="d-flex align-items-center gap-4">
+
+<img src="./data/calicut.png" class="exp-logo">
+
+<div>
+
+<h3 class="company-title">
+Calicut University
+</h3>
+
+<p class="company-sub">
+Bachelor Of Computer Application
+</p>
+
+<p class="company-location">
+June 2020 - March 2023
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="company-group">
+
+<div class="company-header">
+
+<div class="d-flex align-items-center gap-4">
+
+<img src="./data/luminar.png" class="exp-logo">
+
+<div>
+
+<h3 class="company-title">
+Luminar Technolab
+</h3>
+
+<p class="company-sub">
+Data Science Internship
+</p>
+
+<p class="company-location">
+May 2023 - November 2024
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="company-group">
+
+<div class="company-header">
+
+<div class="d-flex align-items-center gap-4">
+
+<img src="./data/ineu.png" class="exp-logo">
+
+<div>
+
+<h3 class="company-title">
+iNeuron
+</h3>
+
+<p class="company-sub">
+Full Stack Data Science & AI
+</p>
+
+<p class="company-location">
+January 2025 - May 2025
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="company-group">
+
+<div class="company-header">
+
+<div class="d-flex align-items-center gap-4">
+
+<img src="./data/code.png" class="exp-logo">
+
+<div>
+
+<h3 class="company-title">
+Codebasics
+</h3>
+
+<p class="company-sub">
+Data Science & Analytics Bootcamp
+</p>
+
+<p class="company-location">
+May 2026 - June 2026
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section" id="projects-section">
+
+<div class="section-title">
+<h2> <span>Projects</span></h2>
 </div>
 
 <div class="row g-4">
 
 <div class="col-md-6">
-<div class="skill-box">
-<i class="fa-brands fa-python"></i>
-<h4>Python Development</h4>
+
+<div class="project-card">
+
+<img src="data/olympia.png">
+
+<div class="project-content">
+
+<h4>Mister Olympia Face Recognition</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>CNN</span><span>Computer Vision</span><span>Deep Learning</span><span>Python</span></div>
+
+<p>
+Advanced facial identification and recognition system built using Convolutional Neural Networks (CNN) for custom image processing.
+</p>
+
+<a href="https://github.com/theaswin/Mr.Olymbia_face_recognition" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
 </div>
+
+</div>
+
 </div>
 
 <div class="col-md-6">
-<div class="skill-box">
-<i class="fa-solid fa-brain"></i>
-<h4>Machine Learning</h4>
+
+<div class="project-card">
+
+<img src="data/sensor.png">
+
+<div class="project-content">
+
+<h4>Sensor Management System</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Python</span><span>IoT</span><span>Real-time Data</span><span>Dashboard</span></div>
+
+<p>
+A Python-based IoT dashboard and control system for tracking, managing, and visualizing environmental sensor data in real-time.
+</p>
+
+<a href="https://github.com/theaswin/Sensor_monitor" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
 </div>
+
+</div>
+
 </div>
 
 <div class="col-md-6">
-<div class="skill-box">
-<i class="fa-solid fa-chart-line"></i>
-<h4>Data Science</h4>
+
+<div class="project-card">
+
+<img src="data/tracker.png">
+
+<div class="project-content">
+
+<h4>Fitness Tracker</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>OpenCV</span><span>Computer Vision</span><span>Pose Estimation</span><span>Python</span></div>
+
+<p>
+Computer vision tracking application designed using OpenCV for human pose estimation and movement analysis.
+</p>
+
+<a href="https://github.com/theaswin/Fitness_tracker" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
 </div>
+
+</div>
+
 </div>
 
 <div class="col-md-6">
-<div class="skill-box">
-<i class="fa-solid fa-robot"></i>
-<h4>Artificial Intelligence</h4>
+
+<div class="project-card">
+
+<img src="data/breast.png">
+
+<div class="project-content">
+
+<h4>Breast Cancer Prediction</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Machine Learning</span><span>Scikit-Learn</span><span>Data Analysis</span><span>Python</span></div>
+
+<p>
+Machine learning classification model developed to predict and diagnose breast cancer using clinical datasets.
+</p>
+
+<a href="https://github.com/theaswin/breast-cancer-prediction" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
 </div>
+
+</div>
+
 </div>
 
 <div class="col-md-6">
-<div class="skill-box">
-<i class="fa-solid fa-database"></i>
-<h4>SQL & Analytics</h4>
+
+<div class="project-card">
+
+<img src="data/house.png">
+
+<div class="project-content">
+
+<h4>Housing Price Prediction</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Machine Learning</span><span>Regression</span><span>Scikit-Learn</span><span>Pandas</span></div>
+
+<p>
+Predictive analytics model employing regression techniques to forecast real estate and housing prices.
+</p>
+
+<a href="https://github.com/theaswin/Housing_price_prediction" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
 </div>
+
+</div>
+
 </div>
 
 <div class="col-md-6">
-<div class="skill-box">
-<i class="fa-solid fa-gears"></i>
-<h4>Odoo ERP Development</h4>
+
+<div class="project-card">
+
+<img src="data/qa.png">
+
+<div class="project-content">
+
+<h4>Question Answer Asking System</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Python</span><span>Tkinter</span><span>ChatGPT API</span><span>NLP</span></div>
+
+<p>
+Interactive desktop application built with Tkinter and integrated with ChatGPT API for real-time natural language query answering.
+</p>
+
+<a href="https://github.com/theaswin/QA_Desktop_app_using_ChatGPT_and_tkinter" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
 </div>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="project-card">
+
+<img src="data/canvas.png">
+
+<div class="project-content">
+
+<h4>Air Canvas</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>OpenCV</span><span>Computer Vision</span><span>Python</span></div>
+
+<p>
+Computer vision application built using OpenCV to draw virtually on a screen by tracking finger gestures in real-time.
+</p>
+
+<a href="https://github.com/theaswin/Air_canvas_OpenCV" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="project-card">
+
+<img src="data/leakage.png">
+
+<div class="project-content">
+
+<h4>Fire or Water Leakage System</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Python</span><span>IoT</span><span>Sensor Data</span><span>Automation</span></div>
+
+<p>
+Automated hazard detection system engineered to detect and alert on early signs of fire or water leakages using sensor feeds.
+</p>
+
+<a href="https://github.com/theaswin/Fire_and_water_leakage_detection" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="project-card">
+
+<img src="data/deaf.png">
+
+<div class="project-content">
+
+<h4>Deaf People Hand Sign Detection</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Computer Vision</span><span>Deep Learning</span><span>Gesture Recognition</span></div>
+
+<p>
+Computer vision model trained to recognize and interpret hand sign language for deaf individuals.
+</p>
+
+<a href="https://github.com/theaswin/Deaf_people_hand_sign_recognition" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="project-card">
+
+<img src="data/covid.png">
+
+<div class="project-content">
+
+<h4>Covid-19 Sentiment Analysis</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>NLP</span><span>Sentiment Analysis</span><span>NLTK</span></div>
+
+<p>
+Natural Language Processing (NLP) pipeline analyzing sentiments around COVID-19 from text data.
+</p>
+
+<a href="https://github.com/theaswin/Covid19_NLP_sentiments_analysis" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="project-card">
+
+<img src="data/helmet.png">
+
+<div class="project-content">
+
+<h4>Helmet and Number Plate Detection</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>OpenCV</span><span>Scikit-Learn</span><span>Object Detection</span><span>Image Processing</span></div>
+
+<p>
+Advanced object detection system using OpenCV and Scikit-Learn to identify helmets and vehicle number plates.
+</p>
+
+<a href="https://github.com/theaswin/Helmet-and-Number-plate-detection-using-opencv-and-sklearn" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-brands fa-github"></i> View on GitHub</a>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -1056,7 +1466,7 @@ data visualization, predictive analytics, and model experimentation.
 <section class="section" id="achievement-section">
 
 <div class="section-title">
-<h2>Achievements & <span>Contributions</span></h2>
+<h2>Achievements </h2>
 </div>
 
 <div class="row g-4">
@@ -1112,11 +1522,13 @@ for students at Ponnani College.
 <div class="project-content">
 
 <h4>Data Bridge</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Odoo</span><span>XML-RPC</span><span>Python</span><span>ERP Migration</span></div>
 
 <p>
-Developed a custom ERP migration module to recover and transfer
-legacy ERP data into new systems.
+Developed a custom ERP migration module to recover and transfer legacy ERP data into new systems.
 </p>
+
+<a href="https://apps.odoo.com/apps/modules/19.0/data_bridge" target="_blank" class="btn btn-outline-info btn-sm mt-3"><i class="fa-solid fa-arrow-up-right-from-square"></i> View on Odoo Apps</a>
 
 </div>
 
@@ -1133,10 +1545,10 @@ legacy ERP data into new systems.
 <div class="project-content">
 
 <h4>Morpho</h4>
+<div class="skill-tags" style="margin-top:-5px; margin-bottom:15px;"><span>Odoo</span><span>Automation</span><span>ERP Workflows</span><span>Python</span></div>
 
 <p>
-Automated periodic payment reminders for overdue invoices
-through Odoo ERP workflows and notifications.
+Automated periodic payment reminders for overdue invoices through Odoo ERP workflows and notifications.
 </p>
 
 </div>
