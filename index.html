@@ -30,7 +30,7 @@ html{
 
 body{
     background:#050816;
-    color:white;
+    color:#e2e8f0;
     font-family:'Poppins',sans-serif;
     overflow-x:hidden;
     position:relative;
@@ -44,9 +44,9 @@ body::before{
     width:100%;
     height:100%;
     background:
-    radial-gradient(circle at 20% 20%, rgba(0,191,255,0.15), transparent 25%),
-    radial-gradient(circle at 80% 30%, rgba(0,255,255,0.10), transparent 25%),
-    radial-gradient(circle at 50% 80%, rgba(0,191,255,0.10), transparent 25%);
+    radial-gradient(circle at 20% 20%, rgba(124,58,237,0.20), transparent 25%),
+    radial-gradient(circle at 80% 30%, rgba(99,102,241,0.12), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(124,58,237,0.12), transparent 25%);
     z-index:-2;
     animation:bgMove 12s infinite alternate ease-in-out;
 }
@@ -79,7 +79,7 @@ body::after{
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#00bfff;
+    background:#7c3aed;
     border-radius:10px;
 }
 
@@ -90,7 +90,7 @@ body::after{
 }
 
 .left-panel{
-    background:#081120;
+    background:#081022;
     position:sticky;
     top:0;
     height:100vh;
@@ -110,8 +110,8 @@ body::after{
     height:260px;
     border-radius:50%;
     object-fit:cover;
-    border:5px solid #00bfff;
-    box-shadow:0 0 40px rgba(0,191,255,0.5);
+    border:5px solid #7c3aed;
+    box-shadow:0 0 40px rgba(124,58,237,0.35);
     animation:float 4s ease-in-out infinite;
 }
 
@@ -128,7 +128,7 @@ body::after{
 }
 
 .left-content h4{
-    color:#00bfff;
+    color:#a78bfa;
     margin-top:10px;
     font-size:18px;
 }
@@ -136,7 +136,7 @@ body::after{
 .intro-text{
     margin-top:25px;
     line-height:1.9;
-    color:#cfcfcf;
+    color:#cbd5e1;
 }
 
 .personal-info{
@@ -149,11 +149,11 @@ body::after{
     gap:15px;
     margin-bottom:20px;
     justify-content:center;
-    color:#d0d0d0;
+    color:#cbd5e1;
 }
 
 .info-box i{
-    color:#00bfff;
+    color:#7c3aed;
     font-size:20px;
 }
 
@@ -169,7 +169,7 @@ body::after{
     align-items:center;
     width:50px;
     height:50px;
-    border:1px solid rgba(255,255,255,0.2);
+    border:1px solid rgba(255,255,255,0.12);
     border-radius:50%;
     margin-right:15px;
     color:white;
@@ -179,9 +179,10 @@ body::after{
 }
 
 .social-icons a:hover{
-    background:#00bfff;
+    background:#7c3aed;
     transform:translateY(-8px) rotate(360deg);
-    box-shadow:0 0 20px #00bfff;
+    box-shadow:0 0 20px rgba(124,58,237,0.25);
+    color:white;
 }
 
 /* RIGHT PANEL */
@@ -199,7 +200,7 @@ body::after{
     display:flex;
     gap:20px;
     margin-bottom:50px;
-    background:rgba(255,255,255,0.05);
+    background:rgba(8,16,34,0.85);
     padding:18px 25px;
     border-radius:18px;
     backdrop-filter:blur(12px);
@@ -218,7 +219,7 @@ body::after{
 }
 
 .section-menu a:hover{
-    background:#00bfff;
+    background:rgba(124,58,237,0.18);
     color:white;
 }
 
@@ -243,7 +244,7 @@ body::after{
 }
 
 .section-title span{
-    color:#00bfff;
+    color:#a78bfa;
 }
 
 /* ABOUT */
@@ -258,7 +259,7 @@ body::after{
 
 .about-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 30px rgba(0,191,255,0.2);
+    box-shadow:0 0 30px rgba(124,58,237,0.25);
 }
 
 .about-card p{
@@ -295,12 +296,12 @@ body::after{
 }
 
 .company-sub{
-    color:#9ca3af;
+    color:#475569;
     margin-top:5px;
 }
 
 .company-location{
-    color:#7d8597;
+    color:#64748b;
     font-size:14px;
     margin-top:5px;
 }
@@ -313,7 +314,7 @@ body::after{
 }
 
 .expand-icon{
-    color:#00bfff;
+    color:#7c3aed;
     font-size:22px;
 }
 
@@ -329,21 +330,21 @@ body::after{
     top:-10px;
     width:2px;
     height:70px;
-    background:rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.12);
 }
 
 .position-dot{
     width:12px;
     height:12px;
     border-radius:50%;
-    background:#00bfff;
+    background:#7c3aed;
     position:absolute;
     left:30px;
     top:25px;
 }
 
 .position-label{
-    color:#00bfff;
+    color:#a78bfa;
     font-size:14px;
     padding-top:20px;
 }
@@ -366,7 +367,7 @@ body::after{
     width:12px;
     height:12px;
     border-radius:50%;
-    background:#00bfff;
+    background:#7c3aed;
 }
 
 .experience-inner{
@@ -381,18 +382,18 @@ body::after{
 }
 
 .exp-company{
-    color:#00bfff;
+    color:#a78bfa;
     margin-bottom:10px;
 }
 
 .exp-date{
-    color:#9ca3af;
+    color:#475569;
     font-size:14px;
     margin-bottom:12px;
 }
 
 .exp-mode{
-    color:#7d8597;
+    color:#64748b;
     font-size:14px;
     margin-bottom:15px;
 }
@@ -406,7 +407,7 @@ body::after{
     display:flex;
     align-items:center;
     gap:10px;
-    color:#4da6ff;
+    color:#7c3aed;
     font-size:14px;
     margin-bottom:18px;
 }
@@ -449,11 +450,11 @@ body::after{
 
 @keyframes illuminate {
     0% {
-        box-shadow: inset 0 0 0 rgba(0, 191, 255, 0);
+        box-shadow: inset 0 0 0 rgba(139, 92, 246, 0);
         color: #d1d5db;
     }
     100% {
-        box-shadow: inset 0 0 20px rgba(0, 191, 255, 0.5);
+        box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.45);
         color: #ffffff;
     }
 }
@@ -483,17 +484,18 @@ body::after{
 /* SKILLS */
 
 .skill-box{
-    background:rgba(255,255,255,0.05);
+    background:rgba(255,255,255,0.04);
     border-radius:18px;
     padding:30px;
     text-align:center;
     transition:0.4s;
     height:100%;
+    border:1px solid rgba(255,255,255,0.08);
 }
 
 .skill-box:hover{
     transform:translateY(-10px);
-    background:#00bfff;
+    background:rgba(124,58,237,0.12);
 }
 
 .skill-box i{
@@ -509,12 +511,12 @@ body::after{
     overflow:hidden;
     transition:0.4s;
     height:100%;
-    border:1px solid rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.06);
 }
 
 .project-card:hover{
     transform:translateY(-12px);
-    box-shadow:0 0 30px rgba(0,191,255,0.2);
+    box-shadow:0 0 30px rgba(124,58,237,0.22);
 }
 
 .project-card img{
@@ -541,8 +543,8 @@ body::after{
 footer{
     text-align:center;
     padding:25px;
-    background:#030712;
-    color:#777;
+    background:#081022;
+    color:#94a3b8;
 }
 
 /* RESPONSIVE */
@@ -564,6 +566,97 @@ footer{
     height:220px;
 }
 
+}
+
+/* CERTIFICATIONS */
+
+.certification-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    transition:0.4s;
+    margin-bottom:25px;
+}
+
+.certification-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px rgba(124,58,237,0.2);
+    background:rgba(255,255,255,0.05);
+}
+
+.cert-header{
+    display:flex;
+    gap:25px;
+    align-items:flex-start;
+}
+
+.cert-icon{
+    width:70px;
+    height:70px;
+    border-radius:14px;
+    object-fit:cover;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.cert-info{
+    flex:1;
+}
+
+.cert-title{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:6px;
+    color:#ffffff;
+}
+
+.cert-issuer{
+    color:#a78bfa;
+    font-size:16px;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.cert-meta{
+    color:#94a3b8;
+    font-size:14px;
+    margin-bottom:4px;
+}
+
+.cert-credential{
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.cert-btn{
+    margin-top:5px;
+    border-color:rgba(167,139,250,0.5);
+    color:#a78bfa;
+    font-weight:500;
+}
+
+.cert-btn:hover{
+    background:#7c3aed;
+    border-color:#7c3aed;
+    color:#ffffff;
+}
+
+.skills-label{
+    color:#cbd5e1;
+    font-weight:500;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+    .cert-header{
+        flex-direction:column;
+        gap:15px;
+    }
+    .cert-icon{
+        width:60px;
+        height:60px;
+    }
 }
 
 </style>
@@ -642,6 +735,7 @@ footer{
 <a onclick="showSection('education-section')">Education</a>
 <a onclick="showSection('projects-section')">Projects</a>
 <a onclick="showSection('achievement-section')">Achievements</a>
+<a onclick="showSection('certifications-section')">Certifications</a>
 
 </div>
 
@@ -1555,6 +1649,90 @@ Automated periodic payment reminders for overdue invoices through Odoo ERP workf
 
 </div>
 
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section class="section" id="certifications-section">
+
+<div class="section-title">
+<h2>Licenses & <span>Certifications</span></h2>
+</div>
+
+<div class="certification-list d-flex flex-column gap-4">
+
+<!-- Certification 1 -->
+<div class="certification-card">
+<div class="cert-header">
+<img src="data/certifications/2.jpg" alt="Certification Icon" class="cert-icon">
+<div class="cert-info">
+<h3 class="cert-title">Data Science</h3>
+<p class="cert-issuer">Luminar Technolab</p>
+<p class="cert-meta">Issued Sep 2022 · Expires Mar 2023</p>
+<p class="cert-credential">Credential ID EDFGHNJKMKL</p>
+<a href="#" target="_blank" class="btn btn-outline-info btn-sm cert-btn">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+<div class="mt-3">
+<span class="skills-label">Skills:</span>
+<div class="skill-tags mt-2">
+<span>Data Science</span>
+<span>Python (Programming Language)</span>
+<span>+2 skills</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Certification 2 -->
+<div class="certification-card">
+<div class="cert-header">
+<img src="data/certifications/1.png" alt="Certification Icon" class="cert-icon">
+<div class="cert-info">
+<h3 class="cert-title">Certificate of completion: Introduction to Claude Cowork</h3>
+<p class="cert-issuer">Anthropic</p>
+<p class="cert-meta">Issued May 2026 · Expires May 2026</p>
+<p class="cert-credential">Credential ID 2ei67mqpppjo</p>
+<a href="#" target="_blank" class="btn btn-outline-info btn-sm cert-btn">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+</div>
+</div>
+</div>
+
+<!-- Certification 3 -->
+<div class="certification-card">
+<div class="cert-header">
+<img src="data/certifications/1.png" alt="Certification Icon" class="cert-icon">
+<div class="cert-info">
+<h3 class="cert-title">Building with the Claude API</h3>
+<p class="cert-issuer">Anthropic</p>
+<p class="cert-meta">Issued May 2026 · Expires May 2026</p>
+<p class="cert-credential">Credential ID dzui6yd9zvc4</p>
+<a href="#" target="_blank" class="btn btn-outline-info btn-sm cert-btn">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+</div>
+</div>
+</div>
+
+<!-- Certification 4 -->
+<div class="certification-card">
+<div class="cert-header">
+<img src="data/certifications/1.png" alt="Certification Icon" class="cert-icon">
+<div class="cert-info">
+<h3 class="cert-title">Certificate of completion: Introduction to agent skills</h3>
+<p class="cert-issuer">Anthropic</p>
+<p class="cert-meta">Issued May 2026</p>
+<p class="cert-credential">Credential ID wkgb29vgqy6z</p>
+<a href="#" target="_blank" class="btn btn-outline-info btn-sm cert-btn">Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+<div class="mt-3">
+<span class="skills-label">Skills:</span>
+<div class="skill-tags mt-2">
+<span>Claude Code Subagents</span>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 </div>
